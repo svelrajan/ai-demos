@@ -29,7 +29,7 @@ forecast = model_fit_result.predict(start = len(entity),
                           end = (len(entity)-1) + 3 * 12,
                           typ = 'levels').rename('Forecast')
 
-# Plot the forecast values (2nd plot)
+# Plot the forecast values (2nd plot) - showing the predicted values
 entity['#Products'].plot(figsize = (12, 5), legend = True)
 forecast.plot(legend = True)
 plt.show()
